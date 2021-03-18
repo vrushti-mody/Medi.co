@@ -1,0 +1,80 @@
+<div class="sidebar">
+    
+    <div class="sidebar-wrapper">
+      <div class="logo">
+        <a href="javascript:void(0)" class="simple-text logo-mini">
+        
+        </a>
+        <a href="javascript:void(0)" class="simple-text logo-normal">
+        Medi.co
+        </a>
+      </div>
+      <ul class="nav">
+        <li>
+          <a href="/users/">
+            <i class="tim-icons icon-notes"></i>
+            <p>Feed</p>
+          </a>
+        </li>
+      
+         <li >
+          <a href="/users/post">
+            <i class="tim-icons icon-shape-star"></i>
+            <p>Share Advice</p>
+          </a>
+        </li>
+        <li>
+          <a href="/users/bot">
+            <i class="tim-icons icon-chat-33"></i>
+            <p>The Healthy Bot</p>
+          </a>
+        </li>
+        <li>
+
+          <a href="/users/recipes">
+            <i class="tim-icons icon-paper"></i>
+            <p>Search for Recipes</p>
+          </a>
+        </li>
+        <% if(user.type ==="patient") { %>
+        <li>
+          <a href="/users/book">
+            <i class="tim-icons icon-heart-2"></i>
+            <p>Book Appointment</p>
+          </a>
+        </li>
+        <% } %>
+        <li>
+          <a href="/users/tracker">
+            <i class="tim-icons icon-user-run"></i>
+            <p>Fitness Tracker</p>
+          </a>
+        </li>
+        <li>
+          <a href="/users/leaderboard">
+            <i class="tim-icons icon-trophy"></i>
+            <p>Leaderboard</p>
+          </a>
+        </li>
+        <li>
+          <a href="/users/profile/<%- user._id %>">
+            <i class="tim-icons icon-badge"></i>
+            <p>Profile</p>
+          </a>
+        </li>
+        <li>
+          <a href="/users/settings">
+            <i class="tim-icons icon-settings-gear-63"></i>
+            <p>Settings</p>
+          </a>
+        </li>
+        <li>
+          <a href="/logout">
+            <i class="tim-icons icon-button-power"></i>
+            <p>Logout</p>
+          </a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
