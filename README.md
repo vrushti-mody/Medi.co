@@ -1,6 +1,7 @@
 # Medi.co
 
-![Medi.co](https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/medical-logo.jpg)
+<img src="https://www.onlinelogomaker.com/blog/wp-content/uploads/2017/07/medical-logo.jpg" width=20%>
+
 
 
 [![Standard Apache License](https://img.shields.io/apm/l/atomic-design-ui.svg?)]() 
@@ -8,7 +9,7 @@
 [![Issues](https://img.shields.io/github/issues-raw/vrushti-mody/Medi.co)](https://github.com/vrushti-mody/Medi.co/issues) 
 
 
-Medi.co aimstTo make the appointment booking process seamless and create a community to educate users with the help of health tips, first aid advice, fitness tips and much more
+Medi.co aims to make the appointment booking process seamless and create a community to educate users with the help of health tips, first aid advice, fitness tips and much more
 
 
 ## How is this tool helpful?
@@ -48,7 +49,7 @@ Medi.co aimstTo make the appointment booking process seamless and create a commu
 
 ```
 $ git clone https://github.com/vrushti-mody/Medi.co.git
-$ cd Productive.ly
+$ cd Medi.co
 ```
 
 - Install dependencies
@@ -76,7 +77,7 @@ $ npm start
 [![PR's Welcome](https://img.shields.io/github/issues-pr-raw/vrushti-mody/Medi.co)]()
 [![Contributors](https://img.shields.io/github/contributors/vrushti-mody/Medi.co)]()
 
-If you have suggestions for how Productive.ly could be improved, or want to report a bug, open an issue! Contributions of all kinds are welcomed!
+If you have suggestions for how Medi.co could be improved, or want to report a bug, open an issue! Contributions of all kinds are welcomed!
 
 For more, check out the [Contributing Guide](./CONTRIBUTING.md).
 
