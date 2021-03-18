@@ -49,9 +49,9 @@ COVID-19 virus has wreaked havoc around the world, infecting millions and raisin
 
 | Directory                                                                                         | Content                      |
 | --------------------------------------------------------------------------------------------------| ---------------------------- |
-| [frontend](https://github.com/vrushti-mody/Medi.co/tree/master/models) | contains database models |
-| [backend](https://github.com/vrushti-mody/Medi.co/tree/master/routes)   | contains routing apis         |
-| [docs](https://github.com/vrushti-mody/Medi.co/tree/master/views)         | contains frontend components |
+| [models](https://github.com/vrushti-mody/Medi.co/tree/master/models) | contains database models |
+| [routes](https://github.com/vrushti-mody/Medi.co/tree/master/routes)   | contains routing apis         |
+| [views](https://github.com/vrushti-mody/Medi.co/tree/master/views)         | contains frontend components |
 
 ### Setup
 
@@ -124,5 +124,5 @@ For more, check out the [Contributing Guide](./CONTRIBUTING.md).
 
 [Apache](LICENSE) © 2020 WandaVision
 
-Made with 💕 by [Vrushti Mody](https://github.com/vrushti-mody) and [Rohan Poojari](https://github.com/RoRogers7) for the HackData Hackathon!
+Made with 💕 by [Vrushti Mody](https://github.com/vrushti-mody) and [Rohan Poojari](https://github.com/RoRogers7) for the HackData 5.0 Hackathon!
 
