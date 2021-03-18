@@ -11,40 +11,48 @@
         <%- include('partials/navbar') %>
       <div class="content">
         <div class="row">
-        
+
           <div class="col-md-12">
-            <h3>Share something!</h3>
-            <div class="card">
-              <div class="card-body">
-                <form method="post" action="/users/post">
-                  <div class="form-group">
-                    <label for="exampleFormControlSelect1">Post type</label>
-                    <select class="form-control" name="type" id="exampleFormControlSelect1">
-                      <option>Health Tip</option>
-                      <option>Fitness Tip</option>
-                      <option>Home Remedies</option>
-                      <option>First Aid Advice</option>
-                      <option>Other</option>
-                    </select>
-                  </div>
-                  <div class="form-group">
-                    <label for="exampleInputPassword1">Post</label>
-                    <textarea name="title" type="text" class="form-control" id="exampleInputPassword1" placeholder="Type something here!" rows="10" required></textarea>
-                  </div>
-                  <input type="hidden" value="<%- user.name %>" name="username"/>
-                  <input type="hidden" value="<%- user._id %>" name="userid"/>
-                  <button type="submit" class="btn btn-primary">Submit</button>
-                </form>
-              </div>
-            </div>
+
+            <div id="messages" style="overflow:scroll; height: 600px;"></div>
+            <form id="message-form" style="display: flex; flex-flow: row wrap; align-items: center;">
+                <div class="col-md-10">
+                  <input type="text" id="myText" class="form-control">
+                </div>
+                <div class="col-md-2">
+                  <button class="btn btn-primary" type="submit" id="button-addon2">Send</button>
+                </div>
+            </form>
+            
+            
+
           </div>
-      
+        
         </div>
       </div>
       <%- include('partials/footer') %>
     </div>
   </div>
- 
+  <script id="message-template" type="text/html">
+    <div class="card card-nav-tabs">
+      <div class="card-header">
+        <h4 class="card-title"><a href="/users/profile/{{email}}">{{username}}</a></h4>
+      <h6 class="card-subtitle mb-2 text-muted">Sent {{createdAt}}</h6>
+      </div>
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{message}}</p>
+        </blockquote>
+      </div>
+    </div>
+  </script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/assets/js/chat.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js"></script>
+  <script src="https://cdn.rawgit.com/khalidsalomao/simple-query-string/22cc5bbe/src/simplequerystring.min.js"></script>
   <!--   Core JS Files   -->
   <script src="../assets/js/core/jquery.min.js"></script>
   <script src="../assets/js/core/popper.min.js"></script>
@@ -57,6 +65,8 @@
   <script src="../assets/js/plugins/chartjs.min.js"></script>
   <!--  Notifications Plugin    -->
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
   <script src="../assets/demo/demo.js"></script>
   <script>
     $(document).ready(function() {

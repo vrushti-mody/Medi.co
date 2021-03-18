@@ -107,6 +107,11 @@ router.get('/google/callback', passport.authenticate('google', { failureRedirect
       return res.redirect('/users')
   });
 })
+router.get('/chat',isValidUser,async function(req,res,next){
+  let user = await User.findOne({_id:req.user._id})
+  res.render('chat',{user})
+  //return res.status(200).json({message:'Logout Successful'});
+});
 
 router.get('/logout',isValidUser,function(req,res,next){
   req.logout();

@@ -13,23 +13,25 @@
         <div class="row">
         
           <div class="col-md-12">
-            <h3>Share something!</h3>
+            <h3>Book an appointment!</h3>
             <div class="card">
               <div class="card-body">
-                <form method="post" action="/users/post">
+                <form method="post" action="/users/book">
                   <div class="form-group">
-                    <label for="exampleFormControlSelect1">Post type</label>
-                    <select class="form-control" name="type" id="exampleFormControlSelect1">
-                      <option>Health Tip</option>
-                      <option>Fitness Tip</option>
-                      <option>Home Remedies</option>
-                      <option>First Aid Advice</option>
-                      <option>Other</option>
+                    <label for="exampleFormControlSelect1">Doctor</label>
+                    <select class="form-control" name="doctor" id="exampleFormControlSelect1">
+                    <% for (let i=0; i< doctors.length; i++) { %>
+                      <option value="<%- doctors[i]._id %>"><%- doctors[i].name %></option>
+                      <% } %>
                     </select>
                   </div>
                   <div class="form-group">
-                    <label for="exampleInputPassword1">Post</label>
-                    <textarea name="title" type="text" class="form-control" id="exampleInputPassword1" placeholder="Type something here!" rows="10" required></textarea>
+                    <label  for="exampleInputPassword1">Date</label>
+                    <input class="form-control" type="date" id="datepicker" name="date" />
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Time</label>
+                    <input class="form-control" type="time" name="time" />
                   </div>
                   <input type="hidden" value="<%- user.name %>" name="username"/>
                   <input type="hidden" value="<%- user._id %>" name="userid"/>
@@ -58,6 +60,11 @@
   <!--  Notifications Plugin    -->
   <script src="../assets/js/plugins/bootstrap-notify.js"></script>
   <script src="../assets/demo/demo.js"></script>
+  <script>
+      $(document).ready(function() {
+    $("#datepicker").datepicker({ startDate:Date.now() });
+});
+  </script>
   <script>
     $(document).ready(function() {
       $().ready(function() {
