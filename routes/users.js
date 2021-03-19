@@ -34,10 +34,18 @@ router.get('/profile/:id',isValidUser, async function(req,res,next){
   return res.render('profile',{user, post})
 })
 
+router.get('/doctors',isValidUser, async function(req,res,next){
+  let user = await User.findOne({_id:req.user._id})
+  let doctors = await User.find({type:"doctor"})
+  res.render('doctors',{user,doctors})
+}) 
+
 router.get('/post',isValidUser, async function(req,res,next){
   let user = await User.findOne({_id:req.user._id})
   res.render('post',{user})
 })
+
+
 
 router.post('/post', async function(req,res,next){
   var post= new Post({

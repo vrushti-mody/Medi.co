@@ -11,9 +11,16 @@
       <div class="content">
         <h2>Your Appointments</h2>
         <div class="row">
-           
+          
             <br>
             <% if (user.type==="doctor"){ %>
+            <div class="col-md-12">
+                <a href="<%- user.sharableLink %>" class="btn btn-default float-right">Go To Your Google Calander</a>
+              </div>
+            </div>
+        
+            <div class="row">
+             
           <% for (let i=0; i<appointments.length; i++){%>
           <div class="col-md-4">
             <div class="card" >

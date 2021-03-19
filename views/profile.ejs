@@ -48,6 +48,8 @@
                       <br>
                       <% if(user.type==="doctor"){ %>
                       <span class="badge badge-pill badge-primary">Doctor</span>
+                      <br>
+                      <p>Registration Number: <%- user.registration %></p>
                       <% } else { %>
                       <span class="badge badge-pill badge-primary">General User</span>
                       <% } %>

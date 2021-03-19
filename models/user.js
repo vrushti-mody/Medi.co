@@ -9,7 +9,9 @@ var schema = new mongoose.Schema({
     bio:{type:String, required:true},
     type:{type:String, required:true},
     iframe:{type:String},
-    sharableLink:{type:String}
+    sharableLink:{type:String},
+    registration:{type:String},
+
 })
 
 schema.statics.hashPassword = function hashPassword(password){

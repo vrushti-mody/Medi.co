@@ -16,7 +16,14 @@
             <p>Feed</p>
           </a>
         </li>
-      
+        <% if(user.type ==="patient") { %>
+        <li>
+          <a href="/users/doctors">
+            <i class="tim-icons icon-paper"></i>
+            <p>View All Doctors</p>
+          </a>
+        </li>
+        <% } %>
          <li >
           <a href="/users/post">
             <i class="tim-icons icon-bulb-63"></i>

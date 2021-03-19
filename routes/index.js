@@ -74,7 +74,8 @@ async function database(req,res){
     bio: req.body.bio,
     type:'doctor',
     iframe: req.body.iframe,
-    sharableLink:req.body.sharableLink
+    sharableLink:req.body.sharableLink,
+    registration:req.body.registration
   });
   try{
     doc=await user.save()
