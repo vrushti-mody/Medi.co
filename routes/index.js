@@ -72,7 +72,9 @@ async function database(req,res){
     password: User.hashPassword(req.body.password),
     createdAt: Date.now(),
     bio: req.body.bio,
-    type:'doctor'
+    type:'doctor',
+    iframe: req.body.iframe,
+    sharableLink:req.body.sharableLink
   });
   try{
     doc=await user.save()

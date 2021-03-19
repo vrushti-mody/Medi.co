@@ -7,7 +7,9 @@ var schema = new mongoose.Schema({
     password: {type:String, required:true},
     createdAt: {type:Date, required:true}, 
     bio:{type:String, required:true},
-    type:{type:String, required:true}
+    type:{type:String, required:true},
+    iframe:{type:String},
+    sharableLink:{type:String}
 })
 
 schema.statics.hashPassword = function hashPassword(password){

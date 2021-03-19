@@ -62,7 +62,16 @@ router.post('/post', async function(req,res,next){
 router.get('/book',isValidUser, async function(req,res,next){
   let user = await User.findOne({_id:req.user._id})
   let doctors = await User.find({type:"doctor"})
-  res.render('book',{user,doctors})
+  console.log(doctors[0].iframe)
+  res.render('book',{user,doctors, iframe: doctors[0].iframe, doctor: doctors[0]})
+})
+
+router.post('/book1',isValidUser, async function(req,res,next){
+  let user = await User.findOne({_id:req.user._id})
+  let doctors = await User.find({type:"doctor"})
+  let doctor = await User.findOne({_id:req.body.doctor})
+  console.log(doctor)
+  res.render('book',{user,doctors, iframe: doctor.iframe, doctor})
 })
 
 router.post('/book', async function(req,res,next){
