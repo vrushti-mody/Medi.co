@@ -60,12 +60,12 @@ router.post('/registerDoctor',function(req,res,next){
     return res.render('registerdoctor',{"error":"Passwords dont match"})
   }
   else{
-    database(req,res);
+    database1(req,res);
   } 
 })
 
 // Save Details to database 
-async function database(req,res){
+async function database1(req,res){
   var user= new User({
     name:req.body.name,
     email:req.body.email,
