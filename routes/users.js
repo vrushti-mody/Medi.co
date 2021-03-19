@@ -30,7 +30,7 @@ router.get('/bot',isValidUser, async function(req,res,next){
 router.get('/profile/:id',isValidUser, async function(req,res,next){
   let id = req.params.id
   let user = await User.findOne({_id:id})
-  let post= await Post.find({userid:id})
+  let post= await Post.find({userid:id}).sort({_id:-1})
   return res.render('profile',{user, post})
 })
 

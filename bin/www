@@ -35,7 +35,7 @@ io.on('connection',(socket)=>{
       return callback(error)
     }
       socket.join(user.room)
-    const meet1 = getMeet(room).meet || 'will be sent by the doctor soon'
+    const meet1 = getMeet(room)? getMeet(room).meet : 'will be sent by the doctor soon'
     console.log(meet1)
      // There are ${number} users online in this session. If you are the only one here, please wait for other users to show up.
     socket.emit('message',
